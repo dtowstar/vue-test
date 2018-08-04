@@ -33,18 +33,18 @@
 <script>
 export default {
   computed: {
-    meetups() {
-      console.log(this.$store);
-      return this.$store.getters.featuredMeetups;
+    meetups () {
+      console.log(this.$store)
+      return this.$store.getters.featuredMeetups
     }
   },
   methods: {
-    onLoadMeetup(id) {
-      console.log("test");
-      this.$router.push("/meetups/" + id);
+    onLoadMeetup (id) {
+      console.log('test')
+      this.$router.push('/meetups/' + id)
     }
   }
-};
+}
 </script>
 <style scoped>
 .title {
