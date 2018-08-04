@@ -18,12 +18,12 @@
 	                  <div>{{ meetup.date }}</div>
                   </div>
                 </v-card-title>
-                <v-card-action>
+                <v-card-actions>
                   <v-btn flat :to="'/meetups/' + meetup.id">
                     <v-icon left light>arrow_forward</v-icon>
                     View Meetup
                   </v-btn>
-                </v-card-action>
+                </v-card-actions>
               </v-flex>
             </v-layout>
           </v-container>
