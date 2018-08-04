@@ -15,10 +15,10 @@
                       <div class="info--text">{{ meetup.date}} - Where it takes place</div>
                       <div></div>
                   </v-card-text>
-                  <v-card-action>
+                  <v-card-actions>
                       <v-spacer></v-spacer>
                       <v-btn class="primary">Register</v-btn>
-                  </v-card-action>
+                  </v-card-actions>
                 </v-card>
             </v-flex>
         </v-layout>
@@ -27,11 +27,11 @@
 
 <script>
 export default {
-    props: ['id'],
-    computed:{
-        meetup(){
-            return this.$store.getters.loadedMeetup(thhis.id)
-        }
+  props: ['id'],
+  computed: {
+    meetup () {
+      return this.$store.getters.loadedMeetup(this.id)
     }
+  }
 }
 </script>
