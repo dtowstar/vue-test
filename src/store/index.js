@@ -27,10 +27,10 @@ export const store = new Vuex.Store({
   action: {},
   getters: {
     loadedMeetups (state) {
-      return state.loadMeetups.sort((MeetupA, MeetupB) => MeetupA.date > MeetupB.date)
+      return state.loadedMeetups.sort((MeetupA, MeetupB) => MeetupA.date > MeetupB.date)
     },
     featuredMeetups (state, getters) {
-      return this.getters.loadMeetups.slice(0, 5)
+      return this.getters.loadedMeetups.slice(0, 5)
     },
     loadedMeetup (state) {
       return (meetupId) => {
