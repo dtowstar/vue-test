@@ -17,12 +17,12 @@
                 :src="meetup.imageUrl"
                 @click.native="onLoadMeetup(meetup.id)"
                 >
-                <div class="title">{{ meetup.title}}</div> 
+                <div class="title">{{ meetup.title}}</div>
                 </v-carousel-item>
                 </v-carousel>
             </v-flex>
       </v-layout>
-      <v-btn @click="onLoadMeetup('sdfsdga')">test</v-btn>
+
        <v-layout row wrap class="mt-2">
           <v-flex xs12 class=" text-xs-center">
              <p>Join our awesome meetup</p>
@@ -34,13 +34,11 @@
 export default {
   computed: {
     meetups () {
-      console.log(this.$store)
       return this.$store.getters.featuredMeetups
     }
   },
   methods: {
     onLoadMeetup (id) {
-      console.log('test')
       this.$router.push('/meetups/' + id)
     }
   }
