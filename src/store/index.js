@@ -30,7 +30,7 @@ export const store = new Vuex.Store({
       return state.loadedMeetups.sort((MeetupA, MeetupB) => MeetupA.date > MeetupB.date)
     },
     featuredMeetups (state, getters) {
-      return this.getters.loadedMeetups.slice(0, 5)
+      return getters.loadedMeetups.slice(0, 5)
     },
     loadedMeetup (state) {
       return (meetupId) => {
